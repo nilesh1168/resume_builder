@@ -1,15 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Resume Builder</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="{{ url_for('static',filename='img/mdb-favicon.ico') }}" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Patrick+Hand&family=Sriracha&family=Ubuntu:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mdb.min.css') }}">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
 </head>
-<body>
-    <div id="app">
-        {{ wtf.quick_form(form) }}
+
+<body class="text-center">
+    <!-- Start your project here-->
+
+    <div class="banner">
+        <!--Main Navigation-->
+        <header class="mb-5">
+
+            <!--Navbar-->
+            <nav class="navbar navbar-dark navbar-expand-lg rgba-brown-strong">
+                <div class="container text-white" style="max-width: 900px;">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand ml-lg-5" href="{{ url_for('home') }}">Resume
+                        Builder</a>
+
+                    <!-- Collapse button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="color: aliceblue;"></span>
+                    </button>
+
+                    <!-- Collapsible content -->
+                    <div class="justify-content-center collapse navbar-collapse" id="basicExampleNav">
+                        <!-- Links -->
+                        <ul class="navbar-nav ml-auto ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('under_const') }}">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- Links -->
+                    </div>
+                    <!-- Collapsible content -->
+                </div>
+            </nav>
+
+            <!--/.Navbar-->
+        </header>
+        <!--Main Navigation-->
+
+        <!--Main layout-->
+        <main class="mb-auto">
+            <h1 style="margin-top: 60px; margin-bottom: 35px;">Build your Resume</h1>
+            <div>
+                <p>ONLINE RESUME BUILDER</p>
+                <p>A better resume builder </p>
+                <p>Our resume builder is easy to use</p>
+                <p>Get your first resume in no time and hassle free</p>
+            </div>
+            <a style="font-family: 'Patrick Hand', cursive;" href="{{ url_for('dashboard') }}" class="btn btn-lg btn-light my-5">Build my
+                Resume</a>
+        </main>
+        <!--Main layout-->
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-copyright text-center py-3">
+                Resume Builder, by Nilesh Suryawanshi
+            </div>
+        </footer>
+        <!--Footer-->
+
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- End your project here-->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js') }}"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+
 </body>
+
 </html>

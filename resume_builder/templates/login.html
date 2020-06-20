@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - Resume Builder</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="{{ url_for('static',filename='img/mdb-favicon.ico') }}" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Patrick+Hand&family=Sriracha&family=Ubuntu:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mdb.min.css') }}">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="container">
+        <div class="row py-4">
+            <div class="col-md-6 image">
+
+            </div>
+            <div class="col-sm-6">
+                <div class="card box">
+                    <form class="border border-light p-5">
+
+                        <div class="h4 mb-4 text-center">Sign in</div>
+                        <div class="card-body">
+                            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4"
+                                placeholder="E-mail">
+
+                            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                                placeholder="Password">
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="defaultLoginFormRemember">
+                                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                            me</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+                            <div class="text-center">
+                                <p>Not a member?
+                                    <a href="{{ url_for('register') }}">Register</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-copyright text-center py-3">
+            Resume Builder, by Nilesh Suryawanshi
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js') }}"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>

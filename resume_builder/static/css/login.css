@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+  }
+
+body
+{
+    background: url('/static/img/pages.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    font-family:'Sriracha', cursive;
+}
+
+main{
+    font-family:'Ubuntu', sans-serif;
+}
+footer{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.box{
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px){
+    .box{
+        max-width: 80%;
+    }
+}
