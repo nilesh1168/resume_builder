@@ -10,7 +10,7 @@ def dashboard():
         return "Dashboard"
 
 @app.route("/login",methods=['GET'])
-def login():
+def login():                
         return render_template('login.html')
 
 @app.route('/register',methods=['GET'])
