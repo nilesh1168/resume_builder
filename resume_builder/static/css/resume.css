@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Josefin+Sans&family=Lato:ital,wght@1,300&family=Lora:wght@400;500;600;700&family=Open+Sans+Condensed:wght@300&family=Sriracha&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    font-family:'Sriracha', cursive;
+}
+
+footer{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+input, textarea{
+    border: transparent;
+    background: transparent;
+
+}
+
+input:hover,textarea:hover{
+    box-shadow: 0px 0px 5px cornflowerblue;
+    border-radius: 10px;
+}
+
+span{
+    line-height: normal;
+    height: max-content;
+    display: inline-block;
+    width: 100%;
+}
+
+#wrapper{
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#designation::placeholder,.skills::placeholder,.university::placeholder{
+    color: green;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+}
+
+#sidebarCollapse:hover{
+    color: #000;
+}
+
+#sidebarCollapse{
+    color:white;
+}
+
+.sidebar{ 
+    font-family: 'Changa', sans-serif;
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+    border-radius: 25px;
+}
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+  }
+  
+.sidebar li a {
+    display: block;
+    color: #000;
+    padding: 8px 12px 8px 10px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color on hover */
+.sidebar li a:hover {
+    background-color: #555;
+    border-radius: 30px;
+  }
+.dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 5px 0px 5px 12px;
+    margin: 0px 0px 0px 12px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    border: 0;
+}
+
+.dropdown-item:hover{
+    background-color: darkgrey;
+    border-radius: 30px;
+    /* padding: 5px 0px 5px 30px; */
+}  
+
+.resume{
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    border-radius: 15px;
+    /* background: url('/resume_builder/static/img/resume_body.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+
+.resume-body-hr{
+    border-width: 5px;
+    border-color: #000;
+}
+
+
+.head span{
+    margin: 0px 0px 10px 0px;
+}
+
+.new-subskill{
+    margin: 5px 20px 5px 0px;
+    font-size: larger;
+    font-style: oblique;
+    display: inline;
+}
+
+#name{
+    font-weight: 700;
+    font-size: 68px;
+}
+
+.head{
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+}
+
+.achievement {
+    font-weight: 400;
+    font-size: x-large;
+}
+
+
+.skills {
+    font-weight: 400;
+    font-size: xx-large;
+    color: green;
+}
+
+#designation{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.degree{
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.university{
+    color: green;
+    font-size: large;
+}
+
+.section{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+/* .profile-pic {
+    display: block;
+} */
+
+.file-upload {
+    display: none;
+}
+.circle {
+    justify-content:center;
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border: 8px solid grey;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    color: #666666;
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
