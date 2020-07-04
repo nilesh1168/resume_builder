@@ -1,6 +1,5 @@
 $('[data-toggle="tooltip"]').tooltip({
     trigger: 'hover'
-
 })
 
 $('#sidebarCollapse').on('click', function () {

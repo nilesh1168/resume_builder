@@ -30,24 +30,17 @@ span{
     width: 100%;
 }
 
+
 #wrapper{
     display: flex;
     width: 100%;
-    align-items: stretch;
 }
 
 #designation::placeholder,.skills::placeholder,.university::placeholder{
     color: green;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        margin-left: -250px;
-    }
-    .sidebar.active {
-        margin-left: 0;
-    }
-}
+
 
 #sidebarCollapse:hover{
     color: #000;
@@ -58,6 +51,7 @@ span{
 }
 
 .sidebar{ 
+    text-align: center;
     font-family: 'Changa', sans-serif;
     min-width: 250px;
     max-width: 250px;
@@ -70,8 +64,8 @@ span{
 
 .sidebar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
     width: 200px;
   }
   
@@ -112,9 +106,6 @@ span{
     min-height: 100vh;
     transition: all 0.3s;
     border-radius: 15px;
-    /* background: url('/resume_builder/static/img/resume_body.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
     font-family: 'Lora', serif;
     font-weight: 400;
 }

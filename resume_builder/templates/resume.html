@@ -3,30 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resume</title>
     <!-- MDB icon -->
-    <link rel="icon" href="{{ url_for('static',filename='img/mdb-favicon.ico') }}" type="image/x-icon">
+    <!-- <link rel="icon" href="{{ url_for('static',filename='img/favicon.ico') }}" type="image/x-icon"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/resume_builder/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="/resume_builder/static/css/mdb.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mdb.min.css') }}">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="/resume_builder/static/css/resume.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/resume.css') }}">
     <script src="https://kit.fontawesome.com/0be09ead75.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id='wrapper'>
-        <nav class="sidebar text-left aqua-gradient">
+        <nav class="sidebar text-left aqua-gradient active">
             <ul type="none">
                 <li class="text-center">
-                    <span style="font-size: xx-large;">John Doe</span>
+                    <span class='pl-3 mt-3' style="font-size: xx-large;"><i class="fas fa-user pr-2"></i>John Doe</span>
                 </li>
-                <hr>
+                <hr width="220px">
                 <li><a class="dropdown-toggle" data-toggle="collapse" data-target="#collapseExample"
                         aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus pr-2"></i>Add
                         new
@@ -42,13 +42,13 @@
                     <a onclick="addProjects()" class="dropdown-item"><i
                             class="fas fa-project-diagram pr-2"></i>Projects</a>
                 </div>
-                <li><a><i class="far fa-eye pr-2"></i>Preview</a></li>
+                <!-- <li><a aria-disabled="true"><i class="far fa-eye pr-2"></i>Preview</a></li> -->
                 <li><a onclick="Print()"><i class="fas fa-download pr-2"></i>Download</a></li>
             </ul>
         </nav>
         <div class="resume card card-body">
             <div class="resume-head">
-                <i id="sidebarCollapse" data-toggle="tooltip" title='Hover and Click for Menu' style='cursor: pointer;' class="fas fa-align-left"></i>
+                <i id="sidebarCollapse" data-toggle="tooltip" title='Hover and Click for Menu' style='cursor: pointer;' class="fas fa-align-left ml-4"></i>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-9">
@@ -58,18 +58,18 @@
                             <div class="row head">
                                 <div class="col-md-6">
                                     <span>
-                                        <i class="fas fa-phone-alt pr-2"></i><input placeholder="+919049425095"
+                                        <i class="fas fa-phone-alt pr-2"></i><input placeholder="+911234567890"
                                             type="text"></input>
                                     </span>
                                     <span>
                                         <i class="fas fa-link pr-2"></i><input type="text"
-                                            placeholder="www.google.com"></input>
+                                            placeholder="youronlinepresence.com"></input>
                                     </span>
                                 </div>
                                 <div class="col-md-6">
                                     <span>
                                         <i class="fas fa-envelope pr-2"></i><input type="text"
-                                            placeholder="n.suryawanshi1168@gmail.com"></input>
+                                            placeholder="email@gmail.com"></input>
                                     </span>
                                     <span>
                                         <i class="fas fa-map-marker-alt pr-2"></i><input type="text"
@@ -146,28 +146,28 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="footer-copyright text-center py-3">
+            Resume Builder, by Nilesh Suryawanshi
+        </div>
+    </footer>
     <!-- jQuery -->
-    <script type="text/javascript" src="/resume_builder/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js') }} "></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="/resume_builder/static/js/popper.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="/resume_builder/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="/resume_builder/static/js/mdb.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js') }}"></script>
     <!-- Your custom scripts (optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-    <script type="text/javascript" src="/resume_builder/static/js/resume.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/resume.js') }}"></script>
 </body>
 
 </html>
 
-<footer>
-    <div class="footer-copyright text-center py-3">
-        Resume Builder, by Nilesh Suryawanshi
-    </div>
-</footer>
+
 
 <!-- <header class="mb-1">
         <nav class="navbar navbar-light navbar-expand-lg cloudy-knoxville-gradient">
