@@ -200,7 +200,7 @@ $('.resume-body').on('keypress', 'textarea', function (evt) {
                         var width = '330px';
                     else
                         var width = '510px';
-                    $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='ml-2' style='width:" + width + "; display: table-cell; vertical-align: middle;' rows='1'>...</textarea></li>");
+                    $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='interest ml-2' style='width:" + width + "; display: table-cell; vertical-align: middle;' rows='1'>...</textarea></li>");
                 }
 
             }
