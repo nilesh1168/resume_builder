@@ -112,18 +112,19 @@ function addnewProject(node) {
 }
 
 $('.resume-body').on('keydown', '.new-subskill, textarea', function (evt) {
-    if ($(this).is('textarea') && !$(this).is('.nodel')) {
-        var size = $(this).val().length
-        if (size == 0 && evt.which === 8) {
-            $(this.parentNode).remove();
+    if(!$(this).is('.nodel')){
+        if ($(this).is('textarea')) {
+            var size = $(this).val().length
+            if (size == 0 && evt.which === 8) {
+                $(this.parentNode).remove();
+            }
+        }
+        else {
+            var size = this.getAttribute('size')
+            if (size == 0 && evt.which === 8)
+                $(this).remove();
         }
     }
-    else {
-        var size = this.getAttribute('size')
-        if (size == 0 && evt.which === 8)
-            $(this).remove();
-    }
-
 });
 
 $(".resume-body").on('mouseenter', ".section", function () {
