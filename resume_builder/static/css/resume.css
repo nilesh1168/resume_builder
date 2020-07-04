@@ -41,13 +41,8 @@ span{
 }
 
 
-
-#sidebarCollapse:hover{
-    color: #000;
-}
-
 #sidebarCollapse{
-    color:white;
+    color:black;
 }
 
 .sidebar{ 

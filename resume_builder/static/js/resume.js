@@ -8,6 +8,7 @@ $('#sidebarCollapse').on('click', function () {
 
 function Print() {
     $('.sidebar').toggleClass('active');
+    $('#sidebarCollapse').css('color','white');
     javascript:window.print();
 };
 
@@ -224,7 +225,11 @@ $('.resume-body').on('mouseleave', 'li > span', function () {
 
 $(document).ready(function () {
     $('#sidebarCollapse').tooltip().mouseover();
-    setTimeout(function(){ $('#sidebarCollapse').tooltip('hide'); }, 3000);
+    setTimeout(function(){ $('#sidebarCollapse').tooltip('hide'); }, 5000);
+    $('#sidebarCollapse').hover(function () { 
+        $(this).css('color','black');
+     });
+
     var readURL = function (input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
