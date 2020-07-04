@@ -189,6 +189,7 @@ $('.resume').on('input', 'textarea', function () {
 $('.resume-body').on('keypress', 'textarea', function (evt) {
     if (evt.which == 10 || evt.which == 13) {
         evt.preventDefault();
+        console.log(this.parentNode)
         if (!$(this.parentNode).is('#degree') && !$(this.parentNode).is('#project_name')) {
             if ($(this).is('.achievement'))
                 $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-medal pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='achievement ml-2' style='width:510px; display:table-cell;' rows='1' placeholder='tfyucyt'></textarea></li>");
@@ -196,10 +197,15 @@ $('.resume-body').on('keypress', 'textarea', function (evt) {
                 if ($(this).is('.award'))
                     $(this.parentNode.parentNode).append("<li style='display:table;' class='mb-4'><i class='fas fa-award pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='award ml-2' style='width:330px;display:table-cell;' rows='1' placeholder='tfyucyt'></textarea></li>");
                 else {
-                    if ($(this).is('.co-act, .interest'))
+                    if ($(this).is('.co-act, .interest')){
                         var width = '330px';
-                    else
+                        console.log("interest/co-act");
+                    }
+                    else{
                         var width = '510px';
+                        console.log("not")
+                    }
+                    console.log("flow")
                     $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='interest ml-2' style='width:" + width + "; display: table-cell; vertical-align: middle;' rows='1'>...</textarea></li>");
                 }
 
