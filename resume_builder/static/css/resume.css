@@ -174,16 +174,19 @@ span{
 .file-upload {
     display: none;
 }
-.circle {
+
+
+.circle{
     justify-content:center;
     border-radius: 1000px !important;
     overflow: hidden;
     width: 180px;
     height: 180px;
     border: 8px solid grey;
+    object-fit:contain;
 }
 img {
-    max-width: 100%;
+    width: inherit;
     height: auto;
 }
 .p-image {

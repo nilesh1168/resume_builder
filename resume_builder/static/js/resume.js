@@ -223,13 +223,13 @@ $('.resume-body').on('mouseleave', 'li > span', function () {
     $(".resume-body .fa-trash-alt").remove();
 })
 
+
+
 $(document).ready(function () {
     $('#sidebarCollapse').tooltip().mouseover();
-    setTimeout(function(){ $('#sidebarCollapse').tooltip('hide'); }, 5000);
     $('#sidebarCollapse').hover(function () { 
         $(this).css('color','black');
      });
-
     var readURL = function (input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -240,6 +240,7 @@ $(document).ready(function () {
 
             reader.readAsDataURL(input.files[0]);
         }
+        $('.profile-pic').draggable();
     }
     $(".file-upload").on('change', function () {
         readURL(this);
