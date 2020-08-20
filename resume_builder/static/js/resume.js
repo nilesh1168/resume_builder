@@ -18,10 +18,10 @@ $(document).on('keyup', 'input[type=text],textarea', function () {
 $('.resume').on('change', 'input[type=date]', function () {
     $(this).attr("size", $(this).val().length);
 });
-$('.resume').on('focusin', 'input[type=date]', function () {
+$('.resume-body').on('focusin', '.fromduration, .toduration', function () {
     $(this).prop('type', 'date');
 });
-$('.resume').on('focusout', 'input[type=date]', function () {
+$('.resume-body').on('focusout', '.fromduration, .toduration', function () {
     $(this).prop('type', 'text');
     if ($(this).is('.toduration')) {
         var today = new Date().toISOString().slice(0, 10);
@@ -59,8 +59,8 @@ function addsubSkill(node) {
 }
 
 function addAchievement() {
-    var newSection = "<div id='achievement' class='mb-5'><span class='section'>Achievements</span><hr class='resume-body-hr'><ul style='padding: 5px;'><li style='display:table;'><i class='fas fa-medal pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='achievement nodel ml-2' style='width:510px;display:table-cell;' rows='1' placeholder='Achievement'></textarea></li></ul><hr></div>";
-    $('#left-col').append(newSection);
+    var newSection = "<div id='achievement' class='mb-5'><span class='section'>Achievements</span><hr class='resume-body-hr'><ul style='padding: 5px;'><li style='display:table;'><i class='fas fa-medal pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='achievement nodel ml-2' style='width:330px;display:table-cell;' rows='1' placeholder='Achievement'></textarea></li></ul><hr></div>";
+    $('#right-col').append(newSection);
 }
 
 function addAwards() {
@@ -85,7 +85,7 @@ function addInterests() {
 }
 
 function addProjects() {
-    var newSection = "<div id='project' class='mb-5'><span class='section'>Projects</span><hr class='resume-body-hr'><div class='new-proj'><span id='project_name' style='display: table;' ><textarea style='width: 510px; display: table-cell; vertical-align: middle;' rows='1' class='nodel degree' type='text 'placeholder='Daily Task Lister'></textarea></span><i class='far fa-calendar-minus pr-2'></i><input class='fromduration ml-3' type='date' placeholder='01/01/2000'></input>-<input class='toduration ml-3' type='date' placeholder='01/01/2000'></input><ul style='padding: 5px;'><li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='edu nodel ml-2' style='width: 510px; display: table-cell; vertical-align: middle;' rows='1'></textarea></li></ul><hr></div></div>"
+    var newSection = "<div id='project' class='mb-5'><span class='section'>Projects</span><hr class='resume-body-hr'><div class='new-proj'><span id='project_name' style='display: table;' ><textarea style='width: 510px; display: table-cell; vertical-align: middle; color:green;' rows='1' class='nodel degree' type='text 'placeholder='Daily Task Lister'></textarea></span><i class='far fa-calendar-minus pr-2'></i><input class='fromduration ml-3' type='date' placeholder='01/01/2000'></input>-<input class='toduration ml-3' type='date' placeholder='01/01/2000'></input><ul style='padding: 5px;'><li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='edu nodel ml-2' style='width: 510px; display: table-cell; vertical-align: middle;' rows='1'></textarea></li></ul><hr></div></div>"
     $('#left-col').append(newSection);
 }
 
@@ -110,7 +110,7 @@ function addLink(node) {
 }
 
 function addnewProject(node) {
-    var newProject = "<div class='new-proj'><span id='project_name'><input class='degree' type='text 'placeholder='Daily Task Lister'></input></span><i class='far fa-calendar-minus pr-2'></i> From <input class='duration ml-3' type='date' placeholder='01/01/2000'></input> to<input class='duration ml-3' type='date' placeholder='01/01/2000'></input><ul style='padding: 5px;'><li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='ml-2' style='width: 510px; display: table-cell; vertical-align: middle;' rows='1'></textarea></li></ul><hr class='my-4'></div></div>";
+    var newProject = "<div class='new-proj'><span id='project_name' style='display: table;' ><textarea style='width: 510px; display: table-cell; vertical-align: middle; color:green;' rows='1' class='nodel degree' type='text 'placeholder='Daily Task Lister'></textarea></span><i class='far fa-calendar-minus pr-2'></i><input class='fromduration ml-3' type='date' placeholder='01/01/2000'></input>-<input class='toduration ml-3' type='date' placeholder='01/01/2000'></input><ul style='padding: 5px;'><li class='mt-3' style='display: table;'><i class='fas fa-arrow-right' style='display: table-cell; vertical-align: middle;'></i><textarea class='edu ml-2' style='width: 510px; display: table-cell; vertical-align: middle;' rows='1'></textarea></li></ul><hr class='my-4'></div></div>";
     $(node).append(newProject);
 }
 
@@ -195,7 +195,7 @@ $('.resume-body').on('keypress', 'textarea', function (evt) {
         console.log(this.parentNode)
         if (!$(this.parentNode).is('#degree') && !$(this.parentNode).is('#project_name')) {
             if ($(this).is('.achievement'))
-                $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-medal pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='achievement ml-2' style='width:510px; display:table-cell;' rows='1'></textarea></li>");
+                $(this.parentNode.parentNode).append("<li class='mt-3' style='display: table;'><i class='fas fa-medal pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='achievement ml-2' style='width:330px; display:table-cell;' rows='1'></textarea></li>");
             else {
                 if ($(this).is('.award'))
                     $(this.parentNode.parentNode).append("<li style='display:table;' class='mb-4'><i class='fas fa-award pr-2' style='color:green; font-size: 40px; vertical-align:middle; display:table-cell;'></i><textarea class='award ml-2' style='width:330px;display:table-cell;' rows='1' ></textarea></li>");
